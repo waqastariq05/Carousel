@@ -1,23 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import Carousel from './components/Carousel';
+import Navbar from './components/Navbar';
+import img1 from './images/1.jpg'
+import img2 from './images/2.jpg'
+import img3 from './images/3.jpg'
+import img4 from './images/4.jpg'
 
 function App() {
+  const items = [
+    {
+      title: 'Content Marketing',
+      description: 'It’s not the best content that wins. It’s the best promoted content that wins.',
+      image: img1,
+    },
+    {
+      title: 'Social Media Marketing',
+      description: 'Digital marketing is the only fashion that never fades.',
+      image: img2,
+    },
+    {
+      title: 'Branding',
+      description: 'When it absolutely, positively has to be there overnight.',
+      image: img3,
+    },
+    {
+      title: 'Campaign Development',
+      description: '"Melts in Your Mouth, Not in Your Hand',
+      image: img4,
+    },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Carousel items={items} />
     </div>
   );
 }

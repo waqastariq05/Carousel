@@ -1,38 +1,151 @@
-.App {
-  text-align: center;
+.box {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.carousel-slide {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  transition: transform 0.5s ease;
+  position: relative;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.carousel-slide::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0, .4);
+  width: 100%;
+  height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.carousel-slide img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.carousel-slide .content {
+  width: 100%;
+  padding: 0 20px !important;
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel-slide .content h3 {
+  font-size: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.carousel-slide .content p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #eee;
+  margin-bottom: 25px;
+}
+
+.slick-dots {
+  position: absolute;
+  top: 91%;
+  z-index: 111;
+}
+
+.slick-dots li {
+  width: 15px !important;
+}
+
+.slick-dots button {
+  cursor: pointer;
+  border: none;
+  padding: 5px;
+  outline: none;
+  transition: color 0.3s ease;
+}
+
+.slick-dots button::before {
+  font-size: 8px !important;
+  color: #eee !important;
+}
+
+.slick-next {
+  position: absolute;
+  top: 50%;
+  right: 3% !important;
+}
+
+.slick-prev {
+  position: absolute;
+  top: 50%;
+  left: 3% !important;
+  z-index: 111;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  font-size: 25px !important;
+}
+
+.btn {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  border: 2px solid #eee;
+  background-color: transparent;
+  padding: 8px 22px;
+  border-radius: 35px;
+  transition: all .3s ease;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #000 !important;
+}
+
+.btn:focus {
+  border: 2px solid #eee !important;
+  color: #fff !important;
+  background: transparent;
+}
+
+
+@media (max-width: 767.98px) {
+  .carousel-slide .content h3 {
+    font-size: 30px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .carousel-slide .content p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .carousel-slide .content h3 {
+    font-size: 20px;
+    margin-bottom: 7px;
+  }
+
+  .carousel-slide .content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 7px 18px;
   }
 }
