@@ -10,11 +10,11 @@ function App() {
   const items = [
     {
       title: 'Content Marketing',
-      description: 'It’s not the best content that wins. It’s the best promoted content that wins.',
+      description: "Content is anything that adds value to the reader's life.",
       image: img1,
     },
     {
-      title: 'Social Media Marketing',
+      title: 'Social Media',
       description: 'Digital marketing is the only fashion that never fades.',
       image: img2,
     },

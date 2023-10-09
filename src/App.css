@@ -134,18 +134,43 @@
 }
 
 @media (max-width: 575.98px) {
+  .box {
+    height: 45vh;
+  }
+
+  .carousel-slide img {
+    height: 45vh;
+  }
+
   .carousel-slide .content h3 {
-    font-size: 20px;
-    margin-bottom: 7px;
+    font-size: 18px;
+    margin-bottom: 5px;
   }
 
   .carousel-slide .content p {
-    font-size: 16px;
-    margin-bottom: 20px;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .slick-dots {
+    top: 86%;
+  }
+
+  .slick-dots li {
+    width: 10px !important;
+  }
+
+  .slick-dots button::before {
+    font-size: 5px !important;
+  }
+
+  .slick-prev::before,
+  .slick-next::before {
+    font-size: 20px !important;
   }
 
   .btn {
-    font-size: 14px;
-    padding: 7px 18px;
+    font-size: 12px;
+    padding: 6px 15px;
   }
 }
